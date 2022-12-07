@@ -1,0 +1,34 @@
+/* COMMON */
+
+.font-12rem {
+    font-size: 1.2rem !important;
+}
+
+.font-1875rem {
+    font-size: 1.875rem !important;
+}
+
+.b-font {
+    font-size: 1.8rem !important;
+}
+
+.s-font {
+    font-size: 1.5rem !important;
+}
+
+.w-60rem {
+    width: 60rem !important;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+.h-5 {
+    height: 5% !important;
+}
+
+.h-80px {
+    height: 80px !important;
+}
+/* END: COMMON */

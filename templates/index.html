@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="calendar container font-12rem mt-2 p-0 d-flex flex-column align-items-stretch">
+    <div class="month w-60rem d-flex align-self-center justify-content-between align-items-center">
+        <div><i class="fas fa-angle-left prev"></i></div>
+        <div class="date d-flex flex-column align-items-center">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div><i class="fas fa-angle-right next"></i></div>
+    </div>
+    <div class="weekdays d-flex justify-content-around">
+        <div class="d-flex justify-content-center align-items-center">Sun</div>
+        <div class="d-flex justify-content-center align-items-center">Mon</div>
+        <div class="d-flex justify-content-center align-items-center">Tue</div>
+        <div class="d-flex justify-content-center align-items-center">Wed</div>
+        <div class="d-flex justify-content-center align-items-center">Thu</div>
+        <div class="d-flex justify-content-center align-items-center">Fri</div>
+        <div class="d-flex justify-content-center align-items-center">Sat</div>
+    </div>
+    <div class="days d-flex flex-column"></div>
+</div>
+<hr class="w-75">
+<div class="overview w-90 mt-0 p-3">
+    <h1 class="ms-5">Overview</h1>
+    <div class="overview-container mt-4 d-flex justify-content-around">
+        <div id="active-worker">
+            <h2 class="mb-3">
+                <i class="fa-solid fa-user font-1875rem"></i>
+                Active Worker
+            </h2>
+            <p>Janitor: 100</p>
+            <p>Collector: 50</p>
+        </div>
+        <div id="active-vehicle">
+            <h2 class="mb-3">
+                <i class="fa-solid fa-truck font-1875rem"></i>
+                Active Vehicle
+            </h2>
+            <p>Troller: 100</p>
+            <p>Small truck: 100</p>
+            <p>Big truck: 50</p>
+        </div>
+        <div id="mcp-status">
+            <h2 class="mb-3">
+                <i class="fa-solid fa-location-dot font-1875rem"></i>
+                MCP Status
+            </h2>
+            <p>Availability: 80%</p>
+        </div>
+    </div>
+</div>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+<script src="{{ url_for('static', filename='calendar.js') }}"></script>
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.nav-item > a').removeClass('active');
+        $('#home > a').addClass('active');
+    });
+</script>
+{% endblock %}

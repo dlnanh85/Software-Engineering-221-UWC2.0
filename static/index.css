@@ -1,0 +1,56 @@
+/* LAYOUT.HTML */
+#header {
+    z-index: 1;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* INDEX.HTML */
+.overview h2 {
+    font-size: 1.8rem !important;
+}
+
+.overview p {
+    font-size: 1.5rem !important;
+}
+
+.weekdays>div,
+.weekdays>div,
+.days>div>div {
+    width: 6rem;
+    height: 4rem;
+}
+
+.prev-date,
+.next-date {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.days div div:hover:not(.today) {
+    background-color: #0d6efd;
+    border: 0.2rem solid #0c5dec;
+    cursor: pointer;
+}
+
+/* WORKER.HTML & VEHICLE.HTML */
+#workerList, #vehicleList {
+    overflow: auto;
+    height: 800px;
+}
+
+#workerList .long-info p,
+#vehicleList .long-info p {
+    font-size: 1.5rem !important;
+}
+
+#workerList > li,
+#vehicleList >li {
+    display: flex;
+}
+
+.short-info {
+    display: flex;
+}

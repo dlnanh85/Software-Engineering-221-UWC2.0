@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<input class="w-90 h-5 mt-3" type="text" id="vehicleSearch" placeholder="Search vehicle by name">
+<ul id="vehicleList" class="list-group mt-3 w-90">
+    {% for vehicle in vehicles %}
+    <li class="mb-4 shadow-sm list-group-item flex-column">
+        <div class="short-info align-items-center h-80px">
+            <img class="h-100" src="https://github.com/mdo.png" alt="" style="object-fit: contain;">
+            <div class="vehicleName d-flex flex-column ms-3 flex-grow-1">
+                <h2 class="s-font m-0">{{ vehicle["type"] + ' #' + vehicle["id"]|string }}</h2>
+                <p class="text-muted m-0">{{ vehicle["position"] }}</p>
+            </div>
+        </div>
+        <hr class="visually-hidden">
+        <div class="long-info d-flex justify-content-between px-3 visually-hidden">
+            <div class="flex-grow-1">
+                <div class="long-info-row row">
+                    <p class="col-3">Current Status:</p>
+                    <p class="col-4 text-success">Working</p>
+                </div>
+                <div class="long-info-row row">
+                    <p class="col-3">Assigned Worker:</p>
+                    <p class="col-4">Nguyen Van A</p>
+                </div>
+                <div class="long-info-row row">
+                    <p class="col-3">Assigned MCP:</p>
+                    <p class="col-4">Ly Thuong Kiet, District 10</p>
+                </div>
+            </div>
+            <div class="vehicleButton d-flex flex-column">
+                <button type="button" class="btn btn-lg mt-1 btn-primary">Assign task</button>
+                <button type="button" class="btn btn-lg mt-1 btn-primary">View info</button>
+                <button type="button" class="btn btn-lg mt-1 btn-danger">Remove</button>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.nav-item > a').removeClass('active');
+        $('#vehicle > a').addClass('active');
+        $("#vehicleSearch").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            console.log(value)
+            $("#vehicleList > li").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+
+        $('#vehicleList li').click(function () {
+            $('.long-info, hr').addClass('visually-hidden')
+            $(this).children('.long-info, hr').removeClass('visually-hidden')
+            // $(this).click(function () {
+            //     $('.long-info, hr').addClass('visually-hidden')
+            // })
+        })
+    });
+</script>
+{% endblock %}
