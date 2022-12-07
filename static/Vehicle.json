@@ -1,0 +1,72 @@
+{
+    "Vehicle": [
+        {
+            "id": "1",
+            "type": "Troller"
+        },
+        {
+            "id": "2",
+            "type": "Troller"
+        },
+        {
+            "id": "3",
+            "type": "Troller"
+        },
+        {
+            "id": "4",
+            "type": "Troller"
+        },
+        {
+            "id": "5",
+            "type": "Troller"
+        },
+        {
+            "id": "6",
+            "type": "Troller"
+        },
+        {
+            "id": "7",
+            "type": "Troller"
+        },
+        {
+            "id": "8",
+            "type": "Troller"
+        },
+        {
+            "id": "9",
+            "type": "Troller"
+        },
+        {
+            "id": "10",
+            "type": "Small truck"
+        },
+        {
+            "id": "11",
+            "type": "Small truck"
+        },
+        {
+            "id": "12",
+            "type": "Small truck"
+        },
+        {
+            "id": "13",
+            "type": "Small truck"
+        },
+        {
+            "id": "14",
+            "type": "Small truck"
+        },
+        {
+            "id": "15",
+            "type": "Small truck"
+        },
+        {
+            "id": "16",
+            "type": "Big truck"
+        },
+        {
+            "id": "17",
+            "type": "Big truck"
+        }        
+    ]
+}

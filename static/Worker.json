@@ -1,0 +1,68 @@
+{
+    "Worker": [
+        {
+            "name": "Nguyen Van A",
+            "position": "Janitor"
+        },
+        {
+            "name": "Tran Van B",
+            "position": "Janitor"
+        },
+        {
+            "name": "Nguyen Thi C",
+            "position": "Janitor"
+        },
+        {
+            "name": "Tran Hoai D",
+            "position": "Janitor"
+        },
+        {
+            "name": "Nguyen Trong E",
+            "position": "Janitor"
+        },
+        {
+            "name": "Dinh Van F",
+            "position": "Janitor"
+        },
+        {
+            "name": "Nadia Cuevas",
+            "position": "Janitor"
+        },
+        {
+            "name": "Kaya Gibson",
+            "position": "Janitor"
+        },
+        {
+            "name": "Lacie Walsh",
+            "position": "Collector"
+        },
+        {
+            "name": "Ricky Wilkinson",
+            "position": "Collector"
+        },
+        {
+            "name": "Mina Shaw",
+            "position": "Collector"
+        },
+        {
+            "name": "Gabriel Byrd",
+            "position": "Collector"
+        },
+        {
+            "name": "Bruce Christian",
+            "position": "Collector"
+        },
+        {
+            "name": "Nikhil Schultz",
+            "position": "Collector"
+        },
+        {
+            "name": "Shivam Hudson",
+            "position": "Collector"
+        },
+        {
+            "name": "Naima Serrano",
+            "position": "Janitor"
+        }
+    ]
+}

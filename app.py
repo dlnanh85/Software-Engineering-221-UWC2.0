@@ -2,12 +2,26 @@ from flask import Flask, render_template, request, session, redirect
 from cs50 import SQL
 from flask_session import Session
 import json
+import os
 
 app = Flask(__name__)
 
 
-# Configure database
-seDB = SQL('mysql://root:158502@localhost:3306/SE')
+#Get data
+filename = os.path.join(app.static_folder, 'User.json')
+f = open(filename)
+users = json.load(f)["User"]
+f.close()
+
+filename = os.path.join(app.static_folder, 'Worker.json')
+f = open(filename)
+workers = json.load(f)["Worker"]
+f.close()
+
+filename = os.path.join(app.static_folder, 'Vehicle.json')
+f = open(filename)
+vehicles = json.load(f)["Vehicle"]
+f.close()
 
 
 # Configure session
@@ -25,8 +39,6 @@ def index():
 
 # BEGIN: Authentication
 def userAuth():
-    users = seDB.execute('SELECT * FROM User')
-    
     for user in users:
         if session['user'] == user['username'] and session['pwd'] == user['password']:
             return True
@@ -56,7 +68,6 @@ def logout():
 # BEGIN: WORKER
 @app.route('/worker')
 def worker():
-    workers = seDB.execute('SELECT * FROM Worker')
     return render_template('worker.html', workers=workers)
 
 # END: WORKER
@@ -64,7 +75,6 @@ def worker():
 # BEGIN: VEHICLE
 @app.route('/vehicle')
 def vehicle():
-    vehicles = seDB.execute('SELECT * FROM Vehicle')
     return render_template('vehicle.html', vehicles=vehicles)
 # END: VEHICLE
 
